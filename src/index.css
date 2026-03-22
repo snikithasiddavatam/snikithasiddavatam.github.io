@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+::selection {
+  background: #7dd3fc;
+  color: #0c4a6e;
+  text-shadow: 0 0 8px rgba(125, 211, 252, 0.6);
+}
+
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50%       { transform: translateY(-10px); }
