@@ -19,6 +19,7 @@ export default function Navbar() {
                 </div>
                 {/* Nav Links */}
                 <div className="hidden md:flex items-center space-x-6 lg: space-x-8">
+                    <a href="#about" className="text-gray-300 hover:text-white text-sm lg:text-base">About</a>
                     <a href="#experience" className="text-gray-300 hover:text-white text-sm lg:text-base">Experience</a>
                     <a href="#projects" className="text-gray-300 hover:text-white text-sm lg:text-base">Projects</a>
                     <a href="#contact" className="text-gray-300 hover:text-white text-sm lg:text-base">Contact</a>
@@ -38,6 +39,7 @@ export default function Navbar() {
         {mobileMenuIsOpen && (
             <div>
                 <div>
+                    <a href="#about" className="text-gray-300 hover:text-white text-sm lg:text-base">About</a>
                     <a href="#experience" className="text-gray-300 hover:text-white text-sm lg:text-base">Experience</a>
                     <a href="#projects" className="text-gray-300 hover:text-white text-sm lg:text-base">Projects</a>
                     <a href="#contact" className="text-gray-300 hover:text-white text-sm lg:text-base">Contact</a>
