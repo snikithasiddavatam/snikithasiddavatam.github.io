@@ -1,4 +1,4 @@
-import { Github, Linkedin } from "lucide-react"
+import { FaGithub, FaLinkedin } from "react-icons/fa"
 
 export default function Hero() {
     return (
@@ -7,10 +7,10 @@ export default function Hero() {
             <p className="text-gray-400 mt-4 text-center">I'm passionate about high-performance computing, autonomous intelligence & competitive programming.</p>
             <div className="flex items-center gap-4 mt-6">
                 <a href="https://github.com/snikithasiddavatam" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors">
-                    <Github className="w-6 h-6" />
+                    <FaGithub className="w-6 h-6" />
                 </a>
                 <a href="https://www.linkedin.com/in/snikitha-siddavatam-88094421a/" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors">
-                    <Linkedin className="w-6 h-6" />
+                    <FaLinkedin className="w-6 h-6" />
                 </a>
             </div>
         </div>
