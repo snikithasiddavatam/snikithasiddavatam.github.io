@@ -37,12 +37,12 @@ export default function Navbar() {
             
         </div>
         {mobileMenuIsOpen && (
-            <div>
-                <div>
-                    <a href="#about" className="text-gray-300 hover:text-white text-sm lg:text-base">About</a>
-                    <a href="#experience" className="text-gray-300 hover:text-white text-sm lg:text-base">Experience</a>
-                    <a href="#projects" className="text-gray-300 hover:text-white text-sm lg:text-base">Projects</a>
-                    <a href="#contact" className="text-gray-300 hover:text-white text-sm lg:text-base">Contact</a>
+            <div className="md:hidden bg-slate-950/95 backdrop-blur-sm border-t border-white/10">
+                <div className="flex flex-col px-4 py-3 space-y-1">
+                    <a href="#about" onClick={() => setMobileMenuIsOpen(false)} className="text-gray-300 hover:text-white text-sm py-2 px-3 rounded-lg hover:bg-white/10 transition-colors">About</a>
+                    <a href="#experience" onClick={() => setMobileMenuIsOpen(false)} className="text-gray-300 hover:text-white text-sm py-2 px-3 rounded-lg hover:bg-white/10 transition-colors">Experience</a>
+                    <a href="#projects" onClick={() => setMobileMenuIsOpen(false)} className="text-gray-300 hover:text-white text-sm py-2 px-3 rounded-lg hover:bg-white/10 transition-colors">Projects</a>
+                    <a href="#contact" onClick={() => setMobileMenuIsOpen(false)} className="text-gray-300 hover:text-white text-sm py-2 px-3 rounded-lg hover:bg-white/10 transition-colors">Contact</a>
                 </div>
             </div>
         )}
