@@ -1,3 +1,7 @@
 export default function Hero() {
-    return <div></div>
+    return (
+        <div className="flex items-center justify-center h-screen">
+            <h1 className="text-4xl font-bold text-white">Hi, I'm Snikitha!</h1>
+        </div>
+    )
 }
