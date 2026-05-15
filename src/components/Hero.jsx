@@ -37,7 +37,7 @@ export default function Hero() {
             {/* ── Status badge ─────────────────────────────────────── */}
             <div className="anim-fade-in-1 mb-7 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-950/50 text-emerald-400 text-xs font-medium tracking-wide">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse shrink-0" />
-                Currently at LayeredAI &middot; AI &amp; Data Systems Intern
+                Currently at CHTC &middot; Research Software Engineer Fellow
             </div>
 
             {/* ── Name ─────────────────────────────────────────────── */}

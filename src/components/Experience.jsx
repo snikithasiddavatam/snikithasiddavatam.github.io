@@ -1,11 +1,20 @@
-import { FaRobot, FaCode, FaGlobe, FaDatabase, FaChartLine } from "react-icons/fa"
+import { FaRobot, FaCode, FaGlobe, FaDatabase, FaChartLine, FaServer } from "react-icons/fa"
 
 const experiences = [
+    {
+        company: "CHTC",
+        location: "Madison, WI",
+        role: "Research Software Engineer Fellow",
+        date: "May 2026 – Present",
+        color: "teal",
+        icon: FaServer,
+        bullets: [],
+    },
     {
         company: "Layered AI",
         location: "Aurora, IL",
         role: "AI and Data Systems Intern",
-        date: "Feb 2026 – Present",
+        date: "Feb 2026 – May 2026",
         color: "rose",
         icon: FaRobot,
         bullets: [
@@ -17,7 +26,7 @@ const experiences = [
         location: "Madison, WI",
         role: "Open Source Intern — Taskflow (C++ Parallel Programming Library)",
         subRole: "under the mentorship of Dr. Tsung-Wei Huang",
-        date: "Dec 2025 – Present",
+        date: "Dec 2025 – May 2026",
         color: "sky",
         icon: FaCode,
         bullets: [
@@ -63,6 +72,7 @@ const experiences = [
 ]
 
 const colorMap = {
+    teal:   { dot: "bg-teal-400",   border: "border-teal-400/30",   badge: "bg-teal-900/40 text-teal-300",     company: "text-teal-300",   icon: "text-teal-400",   iconBg: "bg-teal-900/40" },
     rose:   { dot: "bg-rose-400",   border: "border-rose-400/30",   badge: "bg-rose-900/40 text-rose-300",     company: "text-rose-300",   icon: "text-rose-400",   iconBg: "bg-rose-900/40" },
     sky:    { dot: "bg-sky-400",    border: "border-sky-400/30",    badge: "bg-sky-900/40 text-sky-300",       company: "text-sky-300",    icon: "text-sky-400",    iconBg: "bg-sky-900/40" },
     violet: { dot: "bg-violet-400", border: "border-violet-400/30", badge: "bg-violet-900/40 text-violet-300", company: "text-violet-300", icon: "text-violet-400", iconBg: "bg-violet-900/40" },
