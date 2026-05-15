@@ -6,6 +6,7 @@
   text-shadow: 0 0 8px rgba(125, 211, 252, 0.6);
 }
 
+/* ── Hobby animations ───────────────────────────────────────── */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50%       { transform: translateY(-10px); }
@@ -32,3 +33,49 @@
 .anim-spin-slow     { animation: spin-slow     3.5s linear infinite; }
 .anim-bounce-gentle { animation: bounce-gentle 2.5s ease-in-out infinite; }
 .anim-sway          { animation: sway          2.6s ease-in-out infinite; }
+
+/* ── Shimmer gradient text ──────────────────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: 100% center; }
+  100% { background-position: -100% center; }
+}
+
+.text-shimmer {
+  background: linear-gradient(
+    90deg,
+    #93c5fd 0%,
+    #c4b5fd 25%,
+    #f9a8d4 50%,
+    #c4b5fd 75%,
+    #93c5fd 100%
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 5s linear infinite;
+}
+
+/* ── Fade-in-up stagger (hero) ──────────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.anim-fade-in-1 { animation: fadeInUp 0.6s ease 0.05s both; }
+.anim-fade-in-2 { animation: fadeInUp 0.6s ease 0.20s both; }
+.anim-fade-in-3 { animation: fadeInUp 0.6s ease 0.40s both; }
+.anim-fade-in-4 { animation: fadeInUp 0.6s ease 0.60s both; }
+.anim-fade-in-5 { animation: fadeInUp 0.6s ease 0.80s both; }
+.anim-fade-in-6 { animation: fadeInUp 0.6s ease 1.00s both; }
+
+/* ── Scroll-reveal (sections) ───────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
