@@ -10,7 +10,7 @@ export default function Footer() {
         <footer className="border-t border-white/[0.06]">
             <div className="max-w-6xl mx-auto px-6 sm:px-8 py-10 flex flex-col sm:flex-row items-center justify-between gap-6">
                 <p className="font-mono text-sm text-gray-500">
-                    &copy; 2026 Snikitha Siddavatam &middot; designed &amp; coded in Madison
+                    &copy; 2026 Snikitha Siddavatam &middot; designed &amp; coded in Spring 2026
                 </p>
                 <div className="flex items-center gap-3">
                     {links.map((link) => {
