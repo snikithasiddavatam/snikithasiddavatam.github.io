@@ -2,10 +2,12 @@ import { Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
 
 const navLinks = [
-    { label: "About",      href: "#about"      },
-    { label: "Experience", href: "#experience" },
-    { label: "Projects",   href: "#projects"   },
-    { label: "Contact",    href: "#contact"    },
+    { label: "About",       href: "#about"        },
+    { label: "Experience",  href: "#experience"   },
+    { label: "Projects",    href: "#projects"     },
+    { label: "Open Source", href: "#open-source"  },
+    { label: "Research",    href: "#research"     },
+    { label: "Contact",     href: "#contact"      },
 ]
 
 export default function Navbar() {
@@ -20,23 +22,28 @@ export default function Navbar() {
 
     return (
         <nav className={`fixed top-0 w-full z-50 transition-all duration-300 border-b border-white/[0.06] ${
-            scrolled ? "bg-slate-950/80 backdrop-blur-md" : "bg-slate-950/20 backdrop-blur-sm"
+            scrolled ? "bg-ink/85 backdrop-blur-md" : "bg-ink/30 backdrop-blur-sm"
         }`}>
-            <div className="max-w-3xl mx-auto px-8">
-                <div className="flex justify-between items-center h-14 sm:h-16">
+            <div className="max-w-6xl mx-auto px-6 sm:px-8">
+                <div className="flex justify-between items-center h-16">
 
                     {/* Logo / name */}
-                    <a href="#" className="text-base sm:text-lg font-bold text-white tracking-tight hover:opacity-80 transition-opacity">
-                        snikitha<span className="text-sky-400">.</span>
+                    <a href="#" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                        <span className="w-8 h-8 rounded-lg bg-white text-ink font-mono font-semibold text-xs flex items-center justify-center">
+                            SS
+                        </span>
+                        <span className="font-mono text-sm text-gray-100 tracking-tight">
+                            Snikitha&apos;s Website
+                        </span>
                     </a>
 
                     {/* Desktop nav */}
-                    <div className="hidden md:flex items-center gap-6">
+                    <div className="hidden md:flex items-center gap-7">
                         {navLinks.map(({ label, href }) => (
                             <a
                                 key={label}
                                 href={href}
-                                className="text-gray-400 hover:text-white text-sm transition-colors"
+                                className="text-gray-400 hover:text-gray-100 text-sm transition-colors underline-offset-8 decoration-2 decoration-accent hover:underline"
                             >
                                 {label}
                             </a>
@@ -56,14 +63,14 @@ export default function Navbar() {
 
             {/* Mobile drawer */}
             {mobileMenuIsOpen && (
-                <div className="md:hidden bg-slate-950/95 backdrop-blur-sm border-t border-white/10">
+                <div className="md:hidden bg-ink/95 backdrop-blur-sm border-t border-white/[0.06]">
                     <div className="flex flex-col px-6 py-3 gap-1">
                         {navLinks.map(({ label, href }) => (
                             <a
                                 key={label}
                                 href={href}
                                 onClick={() => setMobileMenuIsOpen(false)}
-                                className="text-gray-300 hover:text-white text-sm py-2 px-3 rounded-lg hover:bg-white/10 transition-colors"
+                                className="text-gray-300 hover:text-white text-sm py-2 px-3 rounded-lg hover:bg-white/[0.06] transition-colors"
                             >
                                 {label}
                             </a>

@@ -3,25 +3,25 @@ import Hero from "./components/Hero"
 import About from "./components/About"
 import Experience from "./components/Experience"
 import Projects from "./components/Projects"
+import OpenSource from "./components/OpenSource"
+import Research from "./components/Research"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
-import Particles from "./components/Particles"
 
 function App() {
 
   return (
-    <>
-      <Particles className="bg-slate-950" color="#ffffff" quantity={100} />
-      <div className="relative z-10 text-white">
-        <Navbar />
-        <Hero />
-        <About />
-        <Experience />
-        <Projects />
-        <Contact />
-        <Footer />
-      </div>
-    </>
+    <div className="bg-ink text-gray-200 min-h-screen">
+      <Navbar />
+      <Hero />
+      <About />
+      <Experience />
+      <Projects />
+      <OpenSource />
+      <Research />
+      <Contact />
+      <Footer />
+    </div>
   )
 }
 
