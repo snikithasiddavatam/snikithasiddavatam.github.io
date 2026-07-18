@@ -36,40 +36,40 @@ function RevealSection({ children, delay = 0 }) {
 
 export default function OpenSource() {
     return (
-        <section id="open-source" className="max-w-6xl mx-auto px-6 sm:px-8 py-24 border-t border-white/[0.06]">
+        <section id="open-source" className="max-w-6xl mx-auto px-6 sm:px-8 py-24 border-t border-edge">
             <RevealSection>
                 <div className="flex items-center gap-3 mb-3">
                     <span className="w-8 h-px bg-accent/60" />
                     <span className="font-mono text-xs tracking-[0.2em] text-accent uppercase">Open Source</span>
                 </div>
-                <h2 className="text-3xl sm:text-4xl font-bold text-gray-100 mb-12">Contributions</h2>
+                <h2 className="text-3xl sm:text-4xl font-bold text-heading mb-12">Contributions</h2>
             </RevealSection>
 
             {contributions.length === 0 ? (
                 <RevealSection delay={100}>
-                    <div className="rounded-2xl border border-white/[0.08] bg-surface p-8 flex flex-col items-center gap-3 text-center">
-                        <FaGithub className="w-8 h-8 text-gray-600" />
-                        <p className="text-sm text-gray-500">Open source contributions coming soon.</p>
+                    <div className="rounded-2xl border border-edge bg-surface p-8 flex flex-col items-center gap-3 text-center">
+                        <FaGithub className="w-8 h-8 text-faint" />
+                        <p className="text-sm text-faint">Open source contributions coming soon.</p>
                     </div>
                 </RevealSection>
             ) : (
                 <div className="grid grid-cols-1 gap-5">
                     {contributions.map((item, i) => (
                         <RevealSection key={item.title} delay={i * 120}>
-                            <div className="rounded-2xl border border-white/[0.08] bg-surface p-7 sm:p-8 hover:border-white/[0.15] transition-colors flex flex-col gap-4">
+                            <div className="rounded-2xl border border-edge bg-surface p-7 sm:p-8 hover:border-edge-strong transition-colors flex flex-col gap-4">
                                 <div className="flex items-center justify-between">
-                                    <h3 className="text-xl font-bold text-gray-100">{item.title}</h3>
+                                    <h3 className="text-xl font-bold text-heading">{item.title}</h3>
                                     {item.url && (
-                                        <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-accent transition-colors">
+                                        <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-faint hover:text-accent transition-colors">
                                             <FaGithub className="w-5 h-5" />
                                         </a>
                                     )}
                                 </div>
-                                <p className="text-sm sm:text-base text-gray-400 leading-relaxed">{item.description}</p>
+                                <p className="text-sm sm:text-base text-muted leading-relaxed">{item.description}</p>
                                 {item.tags && (
                                     <div className="flex flex-wrap gap-2">
                                         {item.tags.map(tag => (
-                                            <span key={tag} className="font-mono text-xs px-2.5 py-1 rounded-full border border-white/[0.08] bg-white/[0.03] text-gray-400">
+                                            <span key={tag} className="font-mono text-xs px-2.5 py-1 rounded-full border border-edge bg-chip text-muted">
                                                 #{tag}
                                             </span>
                                         ))}

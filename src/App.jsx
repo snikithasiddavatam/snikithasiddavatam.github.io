@@ -5,13 +5,14 @@ import Experience from "./components/Experience"
 import Projects from "./components/Projects"
 import OpenSource from "./components/OpenSource"
 import Research from "./components/Research"
+import Honors from "./components/Honors"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
 
 function App() {
 
   return (
-    <div className="bg-ink text-gray-200 min-h-screen">
+    <div className="bg-ink text-strong min-h-screen">
       <Navbar />
       <Hero />
       <About />
@@ -19,6 +20,7 @@ function App() {
       <Projects />
       <OpenSource />
       <Research />
+      <Honors />
       <Contact />
       <Footer />
     </div>
