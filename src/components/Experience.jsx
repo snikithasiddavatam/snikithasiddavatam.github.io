@@ -76,33 +76,33 @@ function RevealSection({ children }) {
 
 export default function Experience() {
     return (
-        <section id="experience" className="max-w-6xl mx-auto px-6 sm:px-8 py-24 border-t border-white/[0.06]">
+        <section id="experience" className="max-w-6xl mx-auto px-6 sm:px-8 py-24 border-t border-edge">
             <div className="flex items-center gap-3 mb-3">
                 <span className="w-8 h-px bg-accent/60" />
                 <span className="font-mono text-xs tracking-[0.2em] text-accent uppercase">Experience</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-100 mb-12">Where I&apos;ve worked</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-heading mb-12">Where I&apos;ve worked</h2>
 
-            <div className="divide-y divide-white/[0.06] border-t border-b border-white/[0.06]">
+            <div className="divide-y divide-edge border-t border-b border-edge">
                 {experiences.map((exp) => (
                     <RevealSection key={exp.company + exp.date}>
                         <div className="grid sm:grid-cols-[11rem_1fr] gap-3 sm:gap-8 py-9">
-                            <div className="font-mono text-sm text-gray-500 pt-1">{exp.date}</div>
+                            <div className="font-mono text-sm text-faint pt-1">{exp.date}</div>
                             <div>
                                 <p className="font-mono text-xs tracking-[0.15em] text-accent uppercase mb-2">
                                     {exp.location}
                                 </p>
-                                <h3 className="text-xl font-bold text-gray-100 leading-snug mb-1">
+                                <h3 className="text-xl font-bold text-heading leading-snug mb-1">
                                     {exp.company}
                                 </h3>
-                                <p className="text-sm font-medium text-gray-300">{exp.role}</p>
+                                <p className="text-sm font-medium text-body">{exp.role}</p>
                                 {exp.subRole && (
-                                    <p className="text-xs text-gray-500 italic mt-0.5">{exp.subRole}</p>
+                                    <p className="text-xs text-faint italic mt-0.5">{exp.subRole}</p>
                                 )}
                                 {exp.bullets.length > 0 && (
                                     <ul className="mt-4 space-y-2">
                                         {exp.bullets.map((b, j) => (
-                                            <li key={j} className="flex gap-3 text-sm text-gray-400 leading-relaxed">
+                                            <li key={j} className="flex gap-3 text-sm text-muted leading-relaxed">
                                                 <span className="mt-2 w-1 h-1 rounded-full shrink-0 bg-accent/70" />
                                                 {b}
                                             </li>

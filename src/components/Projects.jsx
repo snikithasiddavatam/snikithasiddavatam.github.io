@@ -45,35 +45,35 @@ function RevealCard({ children, delay = 0 }) {
 
 export default function Projects() {
     return (
-        <section id="projects" className="max-w-6xl mx-auto px-6 sm:px-8 py-24 border-t border-white/[0.06]">
+        <section id="projects" className="max-w-6xl mx-auto px-6 sm:px-8 py-24 border-t border-edge">
             <div className="flex items-center gap-3 mb-3">
                 <span className="w-8 h-px bg-accent/60" />
                 <span className="font-mono text-xs tracking-[0.2em] text-accent uppercase">Projects</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-100 mb-12">Selected work</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-heading mb-12">Selected work</h2>
 
             <div className="grid grid-cols-1 gap-5">
                 {projects.map((project, i) => (
                     <RevealCard key={project.title} delay={i * 120}>
-                        <div className="rounded-2xl border border-white/[0.08] bg-surface p-7 sm:p-8 hover:border-white/[0.15] transition-colors">
-                            <span className="font-mono text-xs text-gray-500">{project.year}</span>
+                        <div className="rounded-2xl border border-edge bg-surface p-7 sm:p-8 hover:border-edge-strong transition-colors">
+                            <span className="font-mono text-xs text-faint">{project.year}</span>
 
-                            <h3 className="text-xl sm:text-2xl font-bold text-gray-100 leading-snug mt-2">
+                            <h3 className="text-xl sm:text-2xl font-bold text-heading leading-snug mt-2">
                                 {project.title}
                             </h3>
 
                             {project.subtitle && (
-                                <p className="text-sm text-gray-500 mt-1">{project.subtitle}</p>
+                                <p className="text-sm text-faint mt-1">{project.subtitle}</p>
                             )}
 
-                            <p className="text-sm sm:text-base text-gray-400 leading-relaxed mt-4 mb-4">
+                            <p className="text-sm sm:text-base text-muted leading-relaxed mt-4 mb-4">
                                 {project.description}
                             </p>
 
                             {project.bullets && (
                                 <ul className="space-y-2 mb-6">
                                     {project.bullets.map((b, i) => (
-                                        <li key={i} className="flex gap-3 text-sm text-gray-500 leading-relaxed">
+                                        <li key={i} className="flex gap-3 text-sm text-faint leading-relaxed">
                                             <span className="mt-2 w-1 h-1 rounded-full shrink-0 bg-accent/70" />
                                             {b}
                                         </li>
@@ -85,7 +85,7 @@ export default function Projects() {
                                 {project.tags.map((tag) => (
                                     <span
                                         key={tag}
-                                        className="font-mono text-xs px-2.5 py-1 rounded-full border border-white/[0.08] bg-white/[0.03] text-gray-400"
+                                        className="font-mono text-xs px-2.5 py-1 rounded-full border border-edge bg-chip text-muted"
                                     >
                                         #{tag}
                                     </span>
@@ -98,7 +98,7 @@ export default function Projects() {
                                         href={project.github}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex items-center gap-1.5 text-sm text-gray-400 hover:text-accent transition-colors"
+                                        className="flex items-center gap-1.5 text-sm text-muted hover:text-accent transition-colors"
                                     >
                                         <FaGithub className="w-4 h-4" />
                                         <span>Code</span>
@@ -109,7 +109,7 @@ export default function Projects() {
                                         href={project.demo}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex items-center gap-1.5 text-sm text-gray-400 hover:text-accent transition-colors"
+                                        className="flex items-center gap-1.5 text-sm text-muted hover:text-accent transition-colors"
                                     >
                                         <FaExternalLinkAlt className="w-3.5 h-3.5" />
                                         <span>Live</span>

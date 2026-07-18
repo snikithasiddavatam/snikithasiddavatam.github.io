@@ -1,22 +1,71 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-surface: var(--surface);
+  --color-accent: var(--accent);
+  --color-heading: var(--heading);
+  --color-strong: var(--strong);
+  --color-body: var(--body);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-edge: var(--edge);
+  --color-edge-strong: var(--edge-strong);
+  --color-chip: var(--chip);
+  --color-chip-hover: var(--chip-hover);
+}
+
 @theme {
-  --color-ink: #05070d;
-  --color-surface: #0a0e16;
-  --color-accent: #7c9cf8;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", monospace;
 }
 
+/* ── Light theme (default) ──────────────────────────────────── */
+:root {
+  --ink: #faf9f7;
+  --surface: #ffffff;
+  --accent: #172d91;
+  --heading: #1c1917;
+  --strong: #292524;
+  --body: #44403c;
+  --muted: #57534e;
+  --faint: #78716c;
+  --edge: rgba(0, 0, 0, 0.09);
+  --edge-strong: rgba(0, 0, 0, 0.22);
+  --chip: rgba(0, 0, 0, 0.035);
+  --chip-hover: rgba(0, 0, 0, 0.07);
+  color-scheme: light;
+}
+
+/* ── Dark theme ─────────────────────────────────────────────── */
+.dark {
+  --ink: #05070d;
+  --surface: #0a0e16;
+  --accent: #7c9cf8;
+  --heading: #f3f4f6;
+  --strong: #e5e7eb;
+  --body: #d1d5db;
+  --muted: #9ca3af;
+  --faint: #6b7280;
+  --edge: rgba(255, 255, 255, 0.06);
+  --edge-strong: rgba(255, 255, 255, 0.16);
+  --chip: rgba(255, 255, 255, 0.03);
+  --chip-hover: rgba(255, 255, 255, 0.07);
+  color-scheme: dark;
+}
+
 body {
-  background-color: #05070d;
-  color: #e5e7eb;
+  background-color: var(--ink);
+  color: var(--body);
   font-family: var(--font-sans);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 ::selection {
-  background: #7c9cf8;
-  color: #05070d;
+  background: var(--accent);
+  color: var(--ink);
 }
 
 /* ── Fade-in-up stagger (hero) ──────────────────────────────── */
