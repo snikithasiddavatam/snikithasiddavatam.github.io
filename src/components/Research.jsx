@@ -16,6 +16,11 @@ const research = [
         status: "Ongoing",
     },
     {
+        title: "GPU Accelerated Graph Algorithms",
+        advisor: "Dr. Tsung-Wei Huang",
+        status: "Ongoing",
+    },
+    {
         title: "LLM Citation Hallucinations",
         advisor: "Dr. Grigoris Chrysos",
         status: "Ongoing",
