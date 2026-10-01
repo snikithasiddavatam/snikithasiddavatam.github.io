@@ -3,10 +3,10 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa"
 
 const projects = [
     {
-        title: "ARES — Aerial Risk Evaluation System",
+        title: "ARES: Aerial Risk Evaluation System",
         subtitle: "Autonomous Air Traffic Control powered by Multi-Agent AI",
         description:
-            "Autonomous ATC system running 5 specialized AI agents in parallel — detecting separation violations, resolving conflicts, synthesizing voice clearances, forecasting weather risk, and optimizing arrival flows in real time.",
+            "Autonomous ATC system running 5 specialized AI agents in parallel: detecting separation violations, resolving conflicts, synthesizing voice clearances, forecasting weather risk, and optimizing arrival flows in real time.",
         tags: ["python", "react", "fastapi", "gpt-4", "websocket", "redis", "mapbox", "elevenlabs"],
         github: "https://github.com/Tactacion/Ares-hackathon",
         demo: null,

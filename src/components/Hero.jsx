@@ -20,7 +20,7 @@ export default function Hero() {
 
                 <p className="anim-fade-in-3 text-base sm:text-lg text-muted leading-relaxed mb-10">
                     I build at the intersection of{" "}
-                    <strong className="font-semibold text-strong">parallel systems and AI</strong> — currently a{" "}
+                    <strong className="font-semibold text-strong">parallel systems and AI</strong>, currently a{" "}
                     <strong className="font-semibold text-strong">Research Software Engineer Fellow at CHTC</strong>{" "}
                     working on HTCondor, and a contributor to{" "}
                     <a
@@ -32,7 +32,7 @@ export default function Hero() {
                         Taskflow
                     </a>{" "}
                     under Dr. Tsung-Wei Huang, researching the verification of task-parallel programming
-                    systems — work I&apos;ll be presenting at{" "}
+                    systems, work I&apos;ll be presenting at{" "}
                     <strong className="font-semibold text-strong">CppCon 2026 (Main Program)</strong>.
                     Before college, I spent a lot of time on programming contests, including{" "}
                     <strong className="font-semibold text-strong">2&times; IOITC qualifications</strong>.

@@ -50,7 +50,7 @@ export default function Contact() {
                 <h2 className="text-3xl sm:text-4xl font-bold text-heading mb-4">Let&apos;s connect</h2>
                 <p className="text-muted mb-12 max-w-md leading-relaxed">
                     Open to internships, research collaborations, and interesting problems.
-                    Reach out — I&apos;d love to chat.
+                    Reach out, I&apos;d love to chat.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

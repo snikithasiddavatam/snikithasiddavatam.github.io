@@ -45,7 +45,7 @@ export default function About() {
                     <strong className="font-semibold text-strong">Computer Science and Data Science</strong>{" "}
                     student at{" "}
                     <strong className="font-semibold text-strong">UW&ndash;Madison</strong>
-                    , building at the intersection of performance and purpose — because powerful technology should protect as much as it advances.
+                    , building at the intersection of performance and purpose, because powerful technology should protect as much as it advances.
                 </p>
                 <p className="text-lg text-muted leading-relaxed mb-16 max-w-3xl">
                     I&apos;ve qualified twice for the{" "}
@@ -61,7 +61,7 @@ export default function About() {
                     >
                         Taskflow
                     </a>
-                    {" "}— a modern C++ framework for general-purpose task-parallel programming — through the Open Source Program Office, and conducting research on the{" "}
+                    , a modern C++ framework for general-purpose task-parallel programming, through the Open Source Program Office, and conducting research on the{" "}
                     <strong className="font-semibold text-strong">verification of task-parallel programming systems</strong>
                     {" "}under the mentorship of Dr. Tsung-Wei Huang. This summer, I&apos;m at the{" "}
                     <strong className="font-semibold text-strong">Center for High-Throughput Computing (CHTC)</strong>

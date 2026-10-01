@@ -20,7 +20,7 @@ const experiences = [
     {
         company: "Open Source Program Office (OSPO)",
         location: "Madison, WI",
-        role: "Open Source Intern — Taskflow (C++ Parallel Programming Library)",
+        role: "Open Source Intern, Taskflow (C++ Parallel Programming Library)",
         subRole: "under the mentorship of Dr. Tsung-Wei Huang",
         date: "Dec 2025 – May 2026",
         bullets: [
