@@ -1,8 +1,9 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa"
+import profile from "../assets/profile.jpg"
 
 export default function Hero() {
     return (
-        <section className="max-w-6xl mx-auto px-6 sm:px-8 pt-40 pb-28">
+        <section className="max-w-6xl mx-auto px-6 sm:px-8 pt-40 pb-28 flex flex-col-reverse lg:flex-row lg:items-center gap-12 lg:gap-16">
             <div className="max-w-3xl">
                 <span className="anim-fade-in-1 inline-flex items-center gap-2 font-mono text-xs px-3 py-1.5 rounded-full border border-accent/40 bg-accent/10 text-accent mb-6">
                     <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
@@ -20,7 +21,7 @@ export default function Hero() {
 
                 <p className="anim-fade-in-3 text-base sm:text-lg text-muted leading-relaxed mb-10">
                     I build at the intersection of{" "}
-                    <strong className="font-semibold text-strong">parallel systems and AI</strong> — currently a{" "}
+                    <strong className="font-semibold text-strong">parallel systems and AI</strong>, currently a{" "}
                     <strong className="font-semibold text-strong">Research Software Engineer Fellow at CHTC</strong>{" "}
                     working on HTCondor, and a contributor to{" "}
                     <a
@@ -32,7 +33,7 @@ export default function Hero() {
                         Taskflow
                     </a>{" "}
                     under Dr. Tsung-Wei Huang, researching the verification of task-parallel programming
-                    systems — work I&apos;ll be presenting at{" "}
+                    systems, work I&apos;ll be presenting at{" "}
                     <strong className="font-semibold text-strong">CppCon 2026 (Main Program)</strong>.
                     Before college, I spent a lot of time on programming contests, including{" "}
                     <strong className="font-semibold text-strong">2&times; IOITC qualifications</strong>.
@@ -60,6 +61,12 @@ export default function Hero() {
                     </a>
                 </div>
             </div>
+
+            <img
+                src={profile}
+                alt="Snikitha Siddavatam"
+                className="anim-fade-in-2 w-48 sm:w-56 lg:w-72 shrink-0 aspect-square object-cover object-[50%_45%] rounded-full border border-edge-strong"
+            />
         </section>
     )
 }

@@ -23,11 +23,11 @@ const honors = [
         note: "Selected as 1 of 100 students across the U.S. and Canada.",
     },
     {
-        title: "ICPC Algo Queen Programming Cup — Gold Medal",
+        title: "ICPC Algo Queen Programming Cup: Gold Medal",
         date: "2023",
     },
     {
-        title: "IOITC — International Olympiad in Informatics Training Camp",
+        title: "IOITC: International Olympiad in Informatics Training Camp",
         date: "2022–23",
         note: "Top 6 nationally, two consecutive years.",
     },
