@@ -4,7 +4,7 @@ const experiences = [
     {
         company: "CHTC",
         location: "Madison, WI",
-        role: "Research Software Engineer Fellow",
+        role: "Research Computing Fellow",
         date: "May 2026 – Present",
         bullets: [],
     },

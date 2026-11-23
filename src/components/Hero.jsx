@@ -22,7 +22,7 @@ export default function Hero() {
                 <p className="anim-fade-in-3 text-base sm:text-lg text-muted leading-relaxed mb-10">
                     I build at the intersection of{" "}
                     <strong className="font-semibold text-strong">parallel systems and AI</strong>, currently a{" "}
-                    <strong className="font-semibold text-strong">Research Software Engineer Fellow at CHTC</strong>{" "}
+                    <strong className="font-semibold text-strong">Research Computing Fellow at CHTC</strong>{" "}
                     working on HTCondor, and a contributor to{" "}
                     <a
                         href="https://github.com/taskflow/taskflow"
