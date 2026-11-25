@@ -1,125 +1,51 @@
-import { useState, useRef, useEffect } from "react"
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa"
+import Section from "./Section"
 
 const projects = [
     {
-        title: "ARES: Aerial Risk Evaluation System",
-        subtitle: "Autonomous Air Traffic Control powered by Multi-Agent AI",
+        title: "ARES: Autonomous AI Air Traffic Control System",
+        subtitle: null,
         description:
-            "Autonomous ATC system running 5 specialized AI agents in parallel: detecting separation violations, resolving conflicts, synthesizing voice clearances, forecasting weather risk, and optimizing arrival flows in real time.",
-        tags: ["python", "react", "fastapi", "gpt-4", "websocket", "redis", "mapbox", "elevenlabs"],
+            "A multi-agent AI system that autonomously manages air traffic with real-time conflict detection, predictive trajectory modeling, and automated clearances.",
+        tags: ["React", "TypeScript", "Mapbox", "WebSocket", "Claude", "ElevenLabs"],
         github: "https://github.com/Tactacion/Ares-hackathon",
         demo: null,
-        year: "2025",
+        year: "Nov 2025",
         bullets: [
-            "Risk Detection · Conflict Resolution · Weather Advisory · Approach Sequencing · Voice Comms",
-            "Live flight tracking via OpenSky Network with real-time risk scoring from NTSB incident data",
-            "6-hour weather forecast timeline + conflict predictor at NOW / +5 / +10 / +15 min horizons",
+            "Built a 3D airspace visualization dashboard with 2-second WebSocket updates and NTSB-based risk scoring from 40,000+ incidents.",
+            "Integrated Claude for coordinated agent reasoning and ElevenLabs for ATC-grade, urgency-adaptive voice communication.",
         ],
     },
 ]
 
-function RevealCard({ children, delay = 0 }) {
-    const ref = useRef(null)
-    const [visible, setVisible] = useState(false)
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => { if (entry.isIntersecting) setVisible(true) },
-            { threshold: 0.1 }
-        )
-        if (ref.current) observer.observe(ref.current)
-        return () => observer.disconnect()
-    }, [])
-
-    return (
-        <div
-            ref={ref}
-            style={{ transitionDelay: `${delay}ms` }}
-            className={`transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
-        >
-            {children}
-        </div>
-    )
-}
-
 export default function Projects() {
     return (
-        <section id="projects" className="max-w-6xl mx-auto px-6 sm:px-8 py-24 border-t border-edge">
-            <div className="flex items-center gap-3 mb-3">
-                <span className="w-8 h-px bg-accent/60" />
-                <span className="font-mono text-xs tracking-[0.2em] text-accent uppercase">Projects</span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-heading mb-12">Selected work</h2>
-
-            <div className="grid grid-cols-1 gap-5">
-                {projects.map((project, i) => (
-                    <RevealCard key={project.title} delay={i * 120}>
-                        <div className="rounded-2xl border border-edge bg-surface p-7 sm:p-8 hover:border-edge-strong transition-colors">
-                            <span className="font-mono text-xs text-faint">{project.year}</span>
-
-                            <h3 className="text-xl sm:text-2xl font-bold text-heading leading-snug mt-2">
-                                {project.title}
-                            </h3>
-
-                            {project.subtitle && (
-                                <p className="text-sm text-faint mt-1">{project.subtitle}</p>
+        <Section id="projects" title="Projects">
+            <div className="space-y-7">
+                {projects.map((p) => (
+                    <div key={p.title} className="sm:grid sm:grid-cols-[13rem_1fr] sm:gap-8">
+                        <p className="text-muted whitespace-nowrap">{p.year}</p>
+                        <div>
+                        <p>
+                            <span className="text-heading font-semibold">{p.title}</span>
+                            {p.github && (
+                                <> &middot; <a href={p.github} target="_blank" rel="noreferrer" className="link">code</a></>
                             )}
-
-                            <p className="text-sm sm:text-base text-muted leading-relaxed mt-4 mb-4">
-                                {project.description}
-                            </p>
-
-                            {project.bullets && (
-                                <ul className="space-y-2 mb-6">
-                                    {project.bullets.map((b, i) => (
-                                        <li key={i} className="flex gap-3 text-sm text-faint leading-relaxed">
-                                            <span className="mt-2 w-1 h-1 rounded-full shrink-0 bg-accent/70" />
-                                            {b}
-                                        </li>
-                                    ))}
-                                </ul>
+                            {p.demo && (
+                                <> &middot; <a href={p.demo} target="_blank" rel="noreferrer" className="link">demo</a></>
                             )}
-
-                            <div className="flex flex-wrap gap-2 mb-6">
-                                {project.tags.map((tag) => (
-                                    <span
-                                        key={tag}
-                                        className="font-mono text-xs px-2.5 py-1 rounded-full border border-edge bg-chip text-muted"
-                                    >
-                                        #{tag}
-                                    </span>
-                                ))}
-                            </div>
-
-                            <div className="flex items-center gap-5">
-                                {project.github && (
-                                    <a
-                                        href={project.github}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="flex items-center gap-1.5 text-sm text-muted hover:text-accent transition-colors"
-                                    >
-                                        <FaGithub className="w-4 h-4" />
-                                        <span>Code</span>
-                                    </a>
-                                )}
-                                {project.demo && (
-                                    <a
-                                        href={project.demo}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="flex items-center gap-1.5 text-sm text-muted hover:text-accent transition-colors"
-                                    >
-                                        <FaExternalLinkAlt className="w-3.5 h-3.5" />
-                                        <span>Live</span>
-                                    </a>
-                                )}
-                            </div>
+                        </p>
+                        {p.subtitle && <p><em>{p.subtitle}</em></p>}
+                        <p className="mt-1">{p.description}</p>
+                        {p.bullets && (
+                            <ul className="mt-1 list-disc pl-5 space-y-1">
+                                {p.bullets.map((b, i) => <li key={i}>{b}</li>)}
+                            </ul>
+                        )}
+                        <p className="mt-1 text-muted text-base">{p.tags.join(" · ")}</p>
                         </div>
-                    </RevealCard>
+                    </div>
                 ))}
             </div>
-        </section>
+        </Section>
     )
 }
